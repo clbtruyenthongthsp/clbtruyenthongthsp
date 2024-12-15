@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trang web chính thức của Câu lạc bộ Truyền thông, Trường Thực hành Sư phạm">
+    <meta name="keywords" content="Câu lạc bộ truyền thông, Trường Thực hành Sư phạm, Media Club">
+    <meta name="author" content="Nguyễn Thế Huy">
+    <title>CLB Truyền thông - Thực hành Sư phạm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #0044cc;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .form-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+        .form-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-section form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-section form input, .form-section form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-section form button {
+            padding: 10px;
+            background-color: #0044cc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-section form button:hover {
+            background-color: #003399;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Câu lạc bộ Truyền thông</h1>
+        <h2>Trường Thực hành Sư phạm</h2>
+    </header>
+    <nav>
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#hoat-dong">Hoạt động</a>
+        <a href="#viet-bai">Viết bài</a>
+        <a href="#lien-he">Liên hệ</a>
+    </nav>
+    <section id="gioi-thieu">
+        <h2>Giới thiệu</h2>
+        <p>Chào mừng đến với trang web chính thức của Câu lạc bộ Truyền thông. Chúng tôi là nơi hội tụ những học sinh đam mê sáng tạo nội dung, quay phim, chụp ảnh và truyền thông.</p>
+    </section>
+    <section id="hoat-dong">
+        <h2>Hoạt động</h2>
+        <ul>
+            <li>Tổ chức sự kiện trường học</li>
+            <li>Sản xuất video và chụp ảnh</li>
+            <li>Phát triển nội dung truyền thông</li>
+        </ul>
+    </section>
+    <section id="viet-bai" class="form-section">
+        <h2>Viết bài mới</h2>
+        <form id="article-form">
+            <label for="title">Tiêu đề bài viết</label>
+            <input type="text" id="title" name="title" placeholder="Nhập tiêu đề..." required>
+
+            <label for="content">Nội dung</label>
+            <textarea id="content" name="content" rows="6" placeholder="Nhập nội dung bài viết..." required></textarea>
+
+            <button type="submit">Đăng bài</button>
+        </form>
+    </section>
+    <section id="lien-he">
+        <h2>Liên hệ</h2>
+        <p>Email: <a href="mailto:clbtruyenthong.thsptravinh@gmail.com">clbtruyenthong.thsptravinh@gmail.com</a></p>
+        <p>Địa chỉ: Số 227, Đường Phạm Ngũ Lão, Khóm 4, Phường 1, TPTV, Trà Vinh</p>
+    </section>
+    <footer>
+        &copy; 2024 Câu lạc bộ Truyền thông - Trường Thực hành Sư phạm
+    </footer>
+
+    <script>
+        const form = document.getElementById('article-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+
+            alert(`Bài viết mới:\n\nTiêu đề: ${title}\nNội dung: ${content}`);
+            form.reset();
+        });
+    </script>
+</body>
+</html>
